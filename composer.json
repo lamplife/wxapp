@@ -1,0 +1,23 @@
+{
+    "name": "firstphp/wxapp",
+    "description": "微信小程序开发",
+    "type": "library",
+    "keywords": ["微信", "微信用户", "微信API", "微信授权"],
+    "homepage": "http://www.firstphp.com/",
+    "license": "MIT",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "狂奔的蚂蚁",
+            "email": "firstphp@firstphp.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0",
+        "laravel/framework": "5.4.*"
+    },
+    "autoload": {
+        "psr-4": { "Firstphp\\Wxapp\\": "./src" }
+    }
+}
