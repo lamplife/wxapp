@@ -15,7 +15,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.0",
-        "laravel/framework": "5.4.*"
+        "laravel/framework": ">=5.4.*"
     },
     "autoload": {
         "psr-4": { "Firstphp\\Wxapp\\": "./src" }
