@@ -3,7 +3,7 @@
 
 安装扩展:
 
-	composer require firstphp/wxapp:"2.3"
+	composer require firstphp/wxapp:"2.3.2"
 
 
 注册服务:
