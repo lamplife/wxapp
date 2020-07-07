@@ -41,7 +41,7 @@ class WxappServiceProvider extends ServiceProvider
     {
         $this->app->singleton('WxappService', function () {
             $config = Config::get('wxapp');
-            return new WxappService($config['appid'], $config['appsecret'], $config['wxapp_key']);
+            return new WxappService($config['appid'], $config['appsecret']);
         });
     }
 

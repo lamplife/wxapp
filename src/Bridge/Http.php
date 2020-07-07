@@ -2,14 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: 狂奔的螞蟻 <www.firstphp.com>
- * Date: 2013/3/29
+ * Date: 2018/3/29
  * Time: 上午10:00
  */
 namespace Firstphp\Wxapp\Bridge;
 
 use GuzzleHttp\Client;
 
-class Http {
+class Http
+{
 
     /**
      * base uri
@@ -61,16 +62,16 @@ class Http {
     public function __call($name, $arguments)
     {
         if ($this->componentToken) {
-            $arguments[0] .= (stripos($arguments[0], '?') ? '&' : '?').'component_access_token='.$this->componentToken;
+            $arguments[0] .= (stripos($arguments[0], '?') ? '&' : '?') . 'component_access_token=' . $this->componentToken;
         }
         if ($this->componentAppid) {
-            $arguments[0] .= (stripos($arguments[0], '?') ? '&' : '?').'component_appid='.$this->componentAppid;
+            $arguments[0] .= (stripos($arguments[0], '?') ? '&' : '?') . 'component_appid=' . $this->componentAppid;
         }
         if ($this->authorizerToken) {
-            $arguments[0] .= (stripos($arguments[0], '?') ? '&' : '?').'access_token='.$this->authorizerToken;
+            $arguments[0] .= (stripos($arguments[0], '?') ? '&' : '?') . 'access_token=' . $this->authorizerToken;
         }
         if ($this->uploadType) {
-            $arguments[0] .= (stripos($arguments[0], '?') ? '&' : '?').'type='.$this->uploadType;
+            $arguments[0] .= (stripos($arguments[0], '?') ? '&' : '?') . 'type=' . $this->uploadType;
         }
 
         $response = json_decode($this->client->$name($arguments[0], $arguments[1])->getBody()->getContents(), true);
