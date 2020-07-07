@@ -3,7 +3,7 @@
 
 安装扩展:
 
-	composer require firstphp/wxapp:"2.3.2"
+	composer require firstphp/wxapp
 
 
 注册服务:
@@ -14,7 +14,6 @@
 发布配置:
 
 	php artisan vendor:publish
-	选择: [2 ] Provider: Firstphp\Wxapp\Providers\WxappServiceProvider
 
 
 数据表迁移:
