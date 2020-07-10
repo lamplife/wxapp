@@ -282,9 +282,12 @@ class WxappService
     }
 
 
-
     /**
      * 发送订阅消息
+     *
+     * @param string $accessToken
+     * @param array $params
+     * @return mixed
      */
     public function subscribeMessage($accessToken = '', $params = []) {
         return $this->http->post('cgi-bin/message/subscribe/send?access_token='.$accessToken, [
@@ -295,7 +298,19 @@ class WxappService
                 'data' => $params['data']
             ]
         ]);
+    }
 
+
+    /**
+     * 创建被分享动态消息的 activity_id
+     *
+     * @param string $accessToken
+     * @return mixed
+     */
+    public function wxopenActivityIdCreate($accessToken = '') {
+        return $this->http->get('cgi-bin/message/wxopen/activityid/create?access_token='.$accessToken, [
+            'form_params' => []
+        ]);
     }
 
 
